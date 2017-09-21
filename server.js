@@ -5,29 +5,23 @@ var url=require('url');
 const express = require('express');
 const app = express();
 app.set('view engine', 'pug');
-app.use(express.static("views")); //establece lugar donde está el index y carga todo contenido
+app.use(express.static("views")); //localización del raíz
 
 app.get('/', function(req, res){
   currentUrl = req.url
-  res.render('index.pug'); //render es para plantillas (pug es un MW de plantillas)
+  res.render('index.pug'); //llamada de plantillas
 });
 
 app.get('/majesticFlight', function(req, res){
-  //res.sendFile(__dirname + "/" + "index.html"); //si no se usan middlewares
-  res.render('layouts/majesticflight.pug'); //render es para plantillas (pug es un MW de plantillas)
+  res.render('layouts/majesticflight.pug');
 });
 
 app.get('/angelInvaders', function(req, res){
-  //res.sendFile(__dirname + "/" + "index.html"); //si no se usan middlewares
-  res.render('layouts/angelinvaders.pug'); //render es para plantillas (pug es un MW de plantillas)
+  res.render('layouts/angelinvaders.pug');
 });
 
 app.get('/pong', function(req, res){
-  //res.sendFile(__dirname + "/" + "index.html"); //si no se usan middlewares
-  res.render('layouts/pong.pug'); //render es para plantillas (pug es un MW de plantillas)
+  res.render('layouts/pong.pug'); 
 });
 
 app.listen(8080);
-
-
-//para pasar parámetros por url, final interrog. + variable=nombreAPoner
