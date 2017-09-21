@@ -1,0 +1,29 @@
+html{
+        height:100%;
+
+    }
+body{
+    height: auto;
+    width: 100%;
+    margin:0 auto;
+    background-image: url("img/bg.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1{
+    font-size: 50px;
+}
+h1, h5{
+    margin:0 auto;
+    font-family: Verdana;
+
+}
+p{
+    font-family: Verdana;
+    font-size: 14px;
+}
+a:hover{
+    text-decoration: none;
+}

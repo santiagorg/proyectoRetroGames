@@ -1,0 +1,27 @@
+var Menu = {
+
+	preload: function(){
+		juego.stage.backgroundColor = '#333';
+		juego.load.image('boton','img/btn.png');
+	},
+
+	create: function(){
+		var boton = this.add.button(juego.width/2, juego.height/2, 'boton', this.iniciarJuego, this);
+		boton.anchor.setTo(0.5,0.5);
+
+		var txtIniciar = juego.add.text(juego.width/2, juego.height/2 - 85, "Iniciar juego", {
+			font: "bold 24px sans-serif", fill:"cyan", align:"center"
+		});
+		txtIniciar.anchor.setTo(0.5,0.5);
+
+		var txtTitulo = juego.add.text(juego.width/2, juego.height/2 - 155, "Majestic Flight", {
+			font: "bold 34px sans-serif", fill:"cyan", align:"center"
+		});
+		txtTitulo.anchor.setTo(0.5,0.5);
+	},
+
+	iniciarJuego: function(){
+		this.state.start('Juego');
+	}
+
+};

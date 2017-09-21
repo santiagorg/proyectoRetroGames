@@ -1,0 +1,16 @@
+html
+    head
+        include headIndexAngelInvaders.pug
+        style
+            include styleGames.css
+            include bootstrap.css
+body
+    div.container-fluid.text-center 
+        h1.text-center.mt-4.mb-3.text-white Retro Games
+        h5.text-center.mb-2.text-white Angel Invaders
+        nav.btn-group
+            a(href='/majesticFlight')
+                button(type='submit').btn.btn-secondary.m-2 Jugar a Majestic Flight
+            a(href='/pong')
+                button(type='submit').btn.btn-secondary.m-2 Jugar a Pong
+        include ../includes/divJuego.pug
