@@ -57,13 +57,14 @@ var estadoPrincipal = {
 		score1_text.text = score1;
 		score2_text.text = score2;
 		control_paddle(paddle1,juego.input.y);
+    //sonido al chocar pala y bola
 		juego.physics.arcade.collide(paddle1, ball, function(){
 			juego.sound.play('hit');
 		});
 		juego.physics.arcade.collide(paddle2, ball, function(){
 			juego.sound.play('hit_1');
 		});
-		//bola choca en la izquierda
+		//bola choca en fondo
 		if(ball.body.blocked.left){
 			score2 +=1;
 		}else if(ball.body.blocked.right){
